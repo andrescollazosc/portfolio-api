@@ -1,0 +1,14 @@
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/bin/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.deps.json
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/bin/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.dll
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/bin/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.pdb
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.AssemblyInfoInputs.cache
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.AssemblyInfo.cs
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.csproj.CoreCompileInputs.cache
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.dll
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/refint/IdeaCompany.Portfolio.Data.Ef.dll
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.pdb
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/ref/IdeaCompany.Portfolio.Data.Ef.dll
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/bin/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.runtimeconfig.json
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.csproj.AssemblyReference.cache
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Data.Ef/obj/Debug/net8.0/IdeaCompany.Portfolio.Data.Ef.genruntimeconfig.cache
