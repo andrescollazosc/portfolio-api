@@ -11,7 +11,7 @@ public class EmailSettingController : Controller
     public async Task<ActionResult<string>> Create(string portfolioId)
     {
         // TODO: implement logic to add email settings here
-        
-        throw new System.NotImplementedException();
+
+        return Ok("This is a success test");
     }
 }

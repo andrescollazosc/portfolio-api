@@ -8,16 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85b5a5a-7f6d-44e8-9069-702c714f2093" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.IdeaCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IdeaCompany/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Core/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Core/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Core/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Core/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Data.Ef/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Data.Ef/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/IdeaCompany.Portfolio.Core.Tests/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/IdeaCompany.Portfolio.Core.Tests/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.Tests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/IdeaCompany.Portfolio.Core.Tests/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/IdeaCompany.Portfolio.Core.Tests/obj/Debug/net8.0/IdeaCompany.Portfolio.Core.Tests.AssemblyInfoInputs.cache" afterDir="false" />
-    </list>
+    <list default="true" id="d85b5a5a-7f6d-44e8-9069-702c714f2093" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +44,13 @@
     &quot;accountId&quot;: &quot;a145c1cb-f8f3-4b69-b096-12736f7bc10d&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_8_default.globalconfig" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -66,6 +64,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.IdeaCompany.Portfolio.Api: http.executor": "Run",
+    "HTTP Request.IdeaCompany.Portfolio.Api | #1.executor": "Run",
+    "HTTP Request.IdeaCompany.Portfolio.Api | #2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -77,6 +77,12 @@
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.IdeaCompany.Portfolio.Api: http">
+    <configuration name="IdeaCompany.Portfolio.Api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/IdeaCompany.Portfolio.Api.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="IdeaCompany.Portfolio.Api | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/IdeaCompany.Portfolio.Api.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="IdeaCompany.Portfolio.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/IdeaCompany.Portfolio.Api/IdeaCompany.Portfolio.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -135,6 +141,12 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.IdeaCompany.Portfolio.Api | #2" />
+        <item itemvalue="HTTP Request.IdeaCompany.Portfolio.Api | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -147,6 +159,7 @@
       <workItem from="1724079438890" duration="2622000" />
       <workItem from="1724352505540" duration="1348000" />
       <workItem from="1724856214285" duration="3257000" />
+      <workItem from="1724876493918" duration="2672000" />
     </task>
     <task id="LOCAL-00001" summary="feat(portfolio): add core project&#10;&#10;Refs: Task-01">
       <option name="closed" value="true" />
@@ -212,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724081876732</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat(portfolio): add email-settings endpoint&#10;&#10;Refs: TASK-01-ACC">
+      <option name="closed" value="true" />
+      <created>1724879140360</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724879140360</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +247,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -253,6 +279,7 @@
     <MESSAGE value="feat(portfolio): add git ignore file&#10;&#10;Refs: Task-01" />
     <MESSAGE value="feat(portfolio): setup controllers&#10;&#10;Refs: Task-01" />
     <MESSAGE value="feat(portfolio): add EF config&#10;&#10;Refs: Task-01" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(portfolio): add EF config&#10;&#10;Refs: Task-01" />
+    <MESSAGE value="feat(portfolio): add email-settings endpoint&#10;&#10;Refs: TASK-01-ACC" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(portfolio): add email-settings endpoint&#10;&#10;Refs: TASK-01-ACC" />
   </component>
 </project>

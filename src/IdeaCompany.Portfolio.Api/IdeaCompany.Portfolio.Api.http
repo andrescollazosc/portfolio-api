@@ -4,3 +4,6 @@ GET {{IdeaCompany.Portfolio.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+POST {{IdeaCompany.Portfolio.Api_HostAddress}}/api/email-settings?portfolioId=dddd
+Accept: application/json

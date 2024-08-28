@@ -31,3 +31,4 @@
 /Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.pdb
 /Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.genruntimeconfig.cache
 /Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/ref/IdeaCompany.Portfolio.Api.dll
+/Users/andrescollazos/git/Projects/dotnet/IdeaCompany/src/IdeaCompany.Portfolio.Api/obj/Debug/net8.0/IdeaCompany.Portfolio.Api.sourcelink.json
