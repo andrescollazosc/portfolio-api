@@ -1,6 +1,8 @@
-# Visual Studio Code
-.vscode/
-.vscode/*
+# Ignore build output directories in src and tests
+src/**/[Bb]in/
+src/**/[Oo]bj/
+tests/**/[Bb]in/
+tests/**/[Oo]bj/
 
 # User-specific files
 *.rsuser
@@ -13,17 +15,23 @@
 Generated\ Files/
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+src/**/[Dd]ebug/
+src/**/[Dd]ebugPublic/
+src/**/[Rr]elease/
+src/**/[Rr]eleases/
+src/**/x64/
+src/**/x86/
+src/**/[Aa][Rr][Mm]/
+src/**/[Aa][Rr][Mm]64/
+tests/**/[Dd]ebug/
+tests/**/[Dd]ebugPublic/
+tests/**/[Rr]elease/
+tests/**/[Rr]eleases/
+tests/**/x64/
+tests/**/x86/
+tests/**/[Aa][Rr][Mm]/
+tests/**/[Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
 
 # .NET Core
 project.lock.json
@@ -34,9 +42,7 @@ artifacts/
 ScaffoldingReadMe.txt
 
 # Azure Pipelines
-# Ignore Azure Pipeline generated files
 .yaml/
-# Ignore Azure Pipeline generated logs
 *.log
 
 # Windows image file caches
@@ -60,23 +66,18 @@ $RECYCLE.BIN/
 
 # JetBrains Rider
 .idea/
-
-# Rider projects
 .idea/*
 
 # Crash logs
 crashlog*.txt
 
 # Test Results
-[Tt]est[Rr]esults/
-*.trx
-*.coverage
-*.coveragexml
-_Reports/
-Coverage/
-
-# Including Rider UI configurations
-.idea/
+tests/**/[Tt]est[Rr]esults/
+tests/**/*.trx
+tests/**/*.coverage
+tests/**/*.coveragexml
+tests/**/_Reports/
+tests/**/Coverage/
 
 # dotnet specific
 !.dotnet/
@@ -118,11 +119,9 @@ __MACOSX
 *.swp
 *.swo
 
-# End of OS generated files #
-
 # Azure App Service Logs
 logs/
 *.log
 
 # Publish output
-wwwroot/
+src/**/wwwroot/
