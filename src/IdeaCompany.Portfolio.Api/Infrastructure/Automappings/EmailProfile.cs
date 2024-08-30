@@ -8,6 +8,6 @@ public class EmailProfile : Profile
 {
     public EmailProfile()
     {
-        CreateMap<Email, EmailDto>();
+        CreateMap<Email, EmailDto>().ReverseMap();
     }
 }
