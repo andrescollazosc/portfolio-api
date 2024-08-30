@@ -33,7 +33,7 @@ public class EmailSettingsService : IEmailSettingsService
             EnableSsl = true,
             DeliveryMethod = SmtpDeliveryMethod.Network,
             UseDefaultCredentials = false,
-            Credentials = new NetworkCredential("andrescollazosc@gmail.com", "cdbhjubnmyxnntql")
+            Credentials = new NetworkCredential("Your Email Here", "Your Pass Here")
         };
 
         var emailMessage = new MailMessage(email.To, "andrescollazosc@gmail.com");
