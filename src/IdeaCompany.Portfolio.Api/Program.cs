@@ -1,6 +1,22 @@
 using IdeaCompany.Portfolio.Api.Infrastructure.Extensions;
+using IdeaCompany.Portfolio.Data.Ef;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+
+builder.Services.AddDbContext<PortfolioDbContext>((provider, options) =>
+{
+    var dbSqlName = configuration.GetValue<string>("DB_MSSQL_NAME");
+    var dbSqlServer = configuration.GetValue<string>("DB_MSSQL_SERVER");
+    var dbSqlServerUser = configuration.GetValue<string>("DB_MSSQL_USER");
+    var dbSqlServerPwd = configuration.GetValue<string>("DB_MSSQL_PASSWORD");
+    var dbSqlServerCertificate = configuration.GetValue<string>("DB_MSSQL_TRUST_SERVER_CERTIFICATE");
+    
+    var connectionStringSqlServer = $"Data Source={dbSqlServer};Initial Catalog={dbSqlName};User Id={dbSqlServerUser};Password={dbSqlServerPwd};TrustServerCertificate={dbSqlServerCertificate};";
+    
+    options.UseSqlServer(connectionStringSqlServer);
+});
 
 builder.Services.RegisterDependencies();
 builder.Services.AddControllers();
