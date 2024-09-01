@@ -26,6 +26,6 @@ public static class DependencyInjectionExtensions
 
     private static void RegisterValidators(this IServiceCollection services)
     {
-        services.AddSingleton<IValidator<Email>, EmailSettingsValidation>();
+        services.AddSingleton<IValidator<Email>, EmailValidation>();
     }
 }

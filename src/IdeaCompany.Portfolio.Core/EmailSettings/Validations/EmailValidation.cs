@@ -3,9 +3,9 @@ using IdeaCompany.Portfolio.Core.EmailSettings.Models;
 
 namespace IdeaCompany.Portfolio.Core.EmailSettings.Validations;
 
-public class EmailSettingsValidation : AbstractValidator<Email>
+public class EmailValidation : AbstractValidator<Email>
 {
-    public EmailSettingsValidation()
+    public EmailValidation()
     {
         RuleFor(x => x.To)
             .NotEmpty().WithMessage("Email To is required.")
