@@ -9,5 +9,6 @@ public class EmailProfile : Profile
     public EmailProfile()
     {
         CreateMap<Email, EmailDto>().ReverseMap();
+        CreateMap<EmailSettingDto, EmailSetting>().ReverseMap();
     }
 }
