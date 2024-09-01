@@ -26,3 +26,7 @@ tests/**/obj/
 
 # Ignore any .vs folders in the solution root
 .vs/
+
+# Ignore all .dll and .pdb files
+*.dll
+*.pdb
