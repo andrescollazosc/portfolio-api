@@ -1,17 +1,24 @@
 using System.Net;
 using System.Net.Mail;
 using FluentValidation;
+using IdeaCompany.Portfolio.Core.Common.Services;
 using IdeaCompany.Portfolio.Core.EmailSettings.Models;
+using IdeaCompany.Portfolio.Core.EmailSettings.Repositories;
 
 namespace IdeaCompany.Portfolio.Core.EmailSettings.Services.Impl;
 
 public class EmailSettingsService : IEmailSettingsService
 {
-    public IValidator<Email> Validator { get; set; }
+    private IValidator<Email> Validator { get; }
+    private IValidator<EmailSetting> EmailSettingValidator { get; }
+    private IEmailSettingRepository EmailSettingRepository { get; }
     
-    public EmailSettingsService(IValidator<Email> validator)
+    
+    public EmailSettingsService(IValidator<Email> validator, IValidator<EmailSetting> emailSettingValidator, IEmailSettingRepository emailSettingRepository)
     {
         Validator = validator;
+        EmailSettingValidator = emailSettingValidator;
+        EmailSettingRepository = emailSettingRepository;
     }
     
     public async Task SendEmail(Email email)
@@ -24,6 +31,20 @@ public class EmailSettingsService : IEmailSettingsService
         }
         
         PopulateEmail(email);
+    }
+
+    public async Task AddEmailSetting(EmailSetting emailSetting)
+    {
+        var validation = await EmailSettingValidator.ValidateAsync(emailSetting);
+        
+        if (!validation.IsValid)
+        {
+            throw new ValidationException(validation.Errors);
+        }
+
+        emailSetting.PasswordApplication.Encrypt();
+        
+        await EmailSettingRepository.AddAsync(emailSetting);
     }
 
     private static void PopulateEmail(Email email)
