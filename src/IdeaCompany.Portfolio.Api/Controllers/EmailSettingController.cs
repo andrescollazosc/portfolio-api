@@ -2,6 +2,7 @@ using AutoMapper;
 using IdeaCompany.Portfolio.Api.Controllers.Dtos;
 using IdeaCompany.Portfolio.Core.EmailSettings.Models;
 using IdeaCompany.Portfolio.Core.EmailSettings.Services;
+using IdeaCompany.Portfolio.Core.Portfolios.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IdeaCompany.Portfolio.Api.Controllers;
@@ -11,12 +12,14 @@ namespace IdeaCompany.Portfolio.Api.Controllers;
 public class EmailSettingController : Controller
 {
     private IEmailSettingsService EmailSettingsService { get; }
+    private IPortfolioService PortfolioService { get; }
     private IMapper Mapper { get; }
 
-    public EmailSettingController(IEmailSettingsService emailSettingsService, IMapper mapper)
+    public EmailSettingController(IEmailSettingsService emailSettingsService, IMapper mapper, IPortfolioService portfolioService)
     {
         EmailSettingsService = emailSettingsService;
         Mapper = mapper;
+        PortfolioService = portfolioService;
     }
     
     [HttpPost]
@@ -25,8 +28,15 @@ public class EmailSettingController : Controller
     {
         try
         {
+            var portfolio = await PortfolioService.GetPortfolioByTag(portfolioId);
+
+            if (portfolio is null)
+            {
+                return NotFound();
+            }
+
             var emailSetting = Mapper.Map<EmailSetting>(emailSettingDto);
-            emailSetting.PortfolioId = Guid.NewGuid();
+            emailSetting.Portfolio = portfolio;
             await EmailSettingsService.AddEmailSetting(emailSetting);
             
             return Ok("The email settings have been created.");
