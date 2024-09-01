@@ -42,7 +42,7 @@ public class EmailSettingsService : IEmailSettingsService
             throw new ValidationException(validation.Errors);
         }
 
-        emailSetting.PasswordApplication.Encrypt();
+        emailSetting.PasswordApplication = emailSetting.PasswordApplication.Encrypt();
         
         await EmailSettingRepository.AddAsync(emailSetting);
     }

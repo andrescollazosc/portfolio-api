@@ -16,7 +16,7 @@ public class EmailSettingMapping : IEntityTypeConfiguration<EmailSetting>
         
         builder.Property(x => x.PasswordApplication)
             .IsRequired()
-            .HasMaxLength(30);
+            .HasMaxLength(50);
         
         builder.Property(x => x.SmtpClient)
             .IsRequired();

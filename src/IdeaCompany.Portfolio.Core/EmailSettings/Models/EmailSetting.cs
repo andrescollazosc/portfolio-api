@@ -2,7 +2,7 @@ namespace IdeaCompany.Portfolio.Core.EmailSettings.Models;
 
 public class EmailSetting
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public Guid PortfolioId { get; set; }
     public string Email { get; set; } = string.Empty;
     public string PasswordApplication { get; set; } = string.Empty;

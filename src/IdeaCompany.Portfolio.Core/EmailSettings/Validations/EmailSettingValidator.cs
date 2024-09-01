@@ -14,7 +14,7 @@ public class EmailSettingValidator : AbstractValidator<EmailSetting>
 
         RuleFor(x => x.PasswordApplication)
             .NotEmpty().WithMessage("Password is required.")
-            .MaximumLength(30).WithMessage("The Password can only be a maximum of 30 characters.");
+            .MaximumLength(50).WithMessage("The Password can only be a maximum of 30 characters.");
         
         RuleFor(x => x.SmtpClient)
             .NotEmpty().WithMessage("SmtpClient is required.");
