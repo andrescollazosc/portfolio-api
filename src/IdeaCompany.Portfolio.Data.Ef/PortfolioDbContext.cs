@@ -13,5 +13,7 @@ public class PortfolioDbContext(DbContextOptions<PortfolioDbContext> options) : 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         new EmailSettingMapping().Configure(modelBuilder.Entity<EmailSetting>());
+        new PortfolioMapping().Configure(modelBuilder.Entity<Core.Portfolios.Models.Portfolio>());
+        new WorkExperienceMapping().Configure(modelBuilder.Entity<Core.Portfolios.Models.WorkExperience>());
     }
 }

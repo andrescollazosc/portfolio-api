@@ -10,7 +10,6 @@ public class WorkExperience
     public string IconCompany { get; set; } = string.Empty;
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }
-    
 
     public Portfolio Portfolio { get; set; }
 }
