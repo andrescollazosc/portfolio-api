@@ -37,28 +37,18 @@ public class PortfolioMapping : IEntityTypeConfiguration<Core.Portfolios.Models.
             .HasMaxLength(1000);
 
         builder.HasIndex(x => x.PortfolioTag).IsUnique();
-
-        var emailsComparer = new ValueComparer<List<string>>(
-            (c1, c2) => c1.SequenceEqual(c2), 
-            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
-            c => c.ToList());
         
         builder.Property(x => x.Emails)
             .IsRequired()
             .HasConversion(v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null!),
                 v => JsonSerializer.Deserialize<List<string>>(v, (JsonSerializerOptions)null))
-            .Metadata.SetValueComparer(emailsComparer);
-        
-        var stringListComparer = new ValueComparer<List<string>>(
-            (c1, c2) => c1.SequenceEqual(c2), 
-            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
-            c => c.ToList());
+            .Metadata.SetValueComparer(ComparerStringList());
         
         builder.Property(x => x.PhoneNumbers)
             .IsRequired()
             .HasConversion(v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null!),
                 v => JsonSerializer.Deserialize<List<string>>(v, (JsonSerializerOptions)null))
-            .Metadata.SetValueComparer(stringListComparer);
+            .Metadata.SetValueComparer(ComparerStringList());
         
         var socialMediaListComparer = new ValueComparer<List<SocialMedia>>(
             (c1, c2) => c1.SequenceEqual(c2),
@@ -70,5 +60,13 @@ public class PortfolioMapping : IEntityTypeConfiguration<Core.Portfolios.Models.
             .HasConversion(v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null!),
                 v => JsonSerializer.Deserialize<List<SocialMedia>>(v, (JsonSerializerOptions)null))
             .Metadata.SetValueComparer(socialMediaListComparer);
+    }
+
+    private static ValueComparer ComparerStringList()
+    {
+        return new ValueComparer<List<string>>(
+            (c1, c2) => c1.SequenceEqual(c2), 
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => c.ToList());
     }
 }
