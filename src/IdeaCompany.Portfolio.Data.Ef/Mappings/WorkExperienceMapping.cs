@@ -32,9 +32,9 @@ public class WorkExperienceMapping : IEntityTypeConfiguration<Core.Portfolios.Mo
         builder.Property(x => x.EndDate)
             .IsRequired();
         
-        builder.HasOne(x => x.Portfolio)
-            .WithMany()
-            .HasForeignKey(p => p.PortfolioId)
-            .IsRequired();
+        // builder.HasOne(x => x.Portfolio)
+        //     .WithMany()
+        //     .HasForeignKey(p => p.PortfolioId)
+        //     .IsRequired();
     }
 }
