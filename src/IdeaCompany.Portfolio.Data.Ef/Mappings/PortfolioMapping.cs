@@ -24,10 +24,6 @@ public class PortfolioMapping : IEntityTypeConfiguration<Core.Portfolios.Models.
             .IsRequired()
             .HasMaxLength(80);
 
-        builder.Property(x => x.Email)
-            .IsRequired()
-            .HasMaxLength(100);
-
         builder.Property(x => x.Location)
             .IsRequired()
             .HasMaxLength(30);
@@ -42,6 +38,17 @@ public class PortfolioMapping : IEntityTypeConfiguration<Core.Portfolios.Models.
 
         builder.HasIndex(x => x.PortfolioTag).IsUnique();
 
+        var emailsComparer = new ValueComparer<List<string>>(
+            (c1, c2) => c1.SequenceEqual(c2), 
+            c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
+            c => c.ToList());
+        
+        builder.Property(x => x.Emails)
+            .IsRequired()
+            .HasConversion(v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null!),
+                v => JsonSerializer.Deserialize<List<string>>(v, (JsonSerializerOptions)null))
+            .Metadata.SetValueComparer(emailsComparer);
+        
         var stringListComparer = new ValueComparer<List<string>>(
             (c1, c2) => c1.SequenceEqual(c2), 
             c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),

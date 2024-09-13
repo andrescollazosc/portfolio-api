@@ -9,7 +9,7 @@ public class PortfolioRepository(PortfolioDbContext dbContext)
 {
     public async Task<Core.Portfolios.Models.Portfolio?> GetByTag(string tag)
     {
-        var portfolio = await DbContext.Portfolios.SingleOrDefaultAsync(x => x.PortfolioTag == tag);
+        var portfolio = await DbContext.Portfolios.Include(x => x.WorkExperiences).SingleOrDefaultAsync(x => x.PortfolioTag == tag);
         
         return portfolio;
     }

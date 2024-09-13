@@ -1,4 +1,5 @@
 using IdeaCompany.Portfolio.Core.EmailSettings.Models;
+using IdeaCompany.Portfolio.Core.WorkExperiences.Models;
 using IdeaCompany.Portfolio.Data.Ef.Mappings;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +9,7 @@ public class PortfolioDbContext : DbContext
 {
     public DbSet<EmailSetting> EmailSettings { get; set; }
     public DbSet<Core.Portfolios.Models.Portfolio> Portfolios { get; set; }
-    public DbSet<Core.Portfolios.Models.WorkExperience> WorkExperiences { get; set; }
+    public DbSet<WorkExperience> WorkExperiences { get; set; }
 
     static PortfolioDbContext() { }
     
@@ -20,6 +21,6 @@ public class PortfolioDbContext : DbContext
     {
         new EmailSettingMapping().Configure(modelBuilder.Entity<EmailSetting>());
         new PortfolioMapping().Configure(modelBuilder.Entity<Core.Portfolios.Models.Portfolio>());
-        new WorkExperienceMapping().Configure(modelBuilder.Entity<Core.Portfolios.Models.WorkExperience>());
+        new WorkExperienceMapping().Configure(modelBuilder.Entity<WorkExperience>());
     }
 }
