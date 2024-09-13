@@ -1,10 +1,11 @@
 using IdeaCompany.Portfolio.Core.Portfolios.Models;
+using IdeaCompany.Portfolio.Core.WorkExperiences.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace IdeaCompany.Portfolio.Data.Ef.Mappings;
 
-public class WorkExperienceMapping : IEntityTypeConfiguration<Core.Portfolios.Models.WorkExperience>
+public class WorkExperienceMapping : IEntityTypeConfiguration<WorkExperience>
 {
     public void Configure(EntityTypeBuilder<WorkExperience> builder)
     {
@@ -14,7 +15,7 @@ public class WorkExperienceMapping : IEntityTypeConfiguration<Core.Portfolios.Mo
             .IsRequired()
             .HasMaxLength(40);
 
-        builder.Property(x => x.ComanyName)
+        builder.Property(x => x.CompanyName)
             .IsRequired()
             .HasMaxLength(80);
 
